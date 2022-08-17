@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .nav-btn{
+    @apply font-bold capitalize transition duration-300 relative hover:text-indigo-500;
+    @apply after:absolute after:w-4 after:h-4 after:top-full after:left-1/2 after:-translate-x-1/2 after:bg-indigo-500 after:rounded-full after:scale-0 after:transition after:duration-300 hover:after:scale-100;
+    
+  }
+
+  .custm-btn{
+    @apply flex space-x-3 items-center justify-center py-3 px-4 border-2 border-indigo-500 rounded-xl relative overflow-hidden z-10;
+    @apply after:absolute after:left-0 after:top-0 after:bottom-0 after:w-1/2 after:bg-indigo-500 after:-z-10 hover:after:w-0 after:transition-all after:duration-300;
+    @apply before:absolute before:right-0 before:top-0 before:bottom-0 before:w-1/2 before:bg-indigo-500 before:-z-10 hover:before:w-0 before:transition-all before:duration-300;
+  }
+
+  .card{
+    @apply  flex bg-white flex-col items-center justify-center mb-10 py-8 px-6 w-3/4 rounded-xl md:mb-0 md:w-1/3 relative z-10 hover:translate-y-7 transition-transform duration-300;
+    @apply  after:absolute after:top-0 after:bottom-0 after:left-0 after:bg-indigo-600 after:w-0 after:-z-10 after:transition-all  hover:after:w-1/2 after:duration-300 after:rounded-l-xl;
+    @apply  before:absolute before:top-0 before:bottom-0 before:right-0 before:bg-indigo-300 before:w-0 before:-z-10 before:transition-all  hover:before:w-1/2 before:duration-300 before:rounded-r-xl;
+  }
+
+  .img-white{
+    filter: invert(99%) sepia(3%) saturate(91%) hue-rotate(205deg) brightness(114%) contrast(100%);
+    transition: 0.3s filter ;
+  }
+
+  .img-main-color{
+    filter: invert(36%) sepia(28%) saturate(3012%) hue-rotate(217deg) brightness(106%) contrast(89%);
+  }
+}
+
+
+
+.hamburger{
+  width: 24px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hamburger span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:2px;
+  background-color: #000;
+  transition: 0.3s;
+}
+
+.hamburger span:nth-child(2){
+  transform: translateY(7px);
+}
+
+.hamburger span:last-child{
+  transform: translateY(14px);
+}
+
+.hamburger.oppen span:first-child{
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.hamburger.oppen span:nth-child(2){
+  transform: translateY(12px) ;
+  opacity: 0;
+}
+
+.hamburger.oppen span:last-child{
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
