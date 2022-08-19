@@ -6,7 +6,10 @@
   .nav-btn{
     @apply font-bold capitalize transition duration-300 relative hover:text-indigo-500;
     @apply after:absolute after:w-4 after:h-4 after:top-full after:left-1/2 after:-translate-x-1/2 after:bg-indigo-500 after:rounded-full after:scale-0 after:transition after:duration-300 hover:after:scale-100;
-    
+  }
+
+  .active-nav{
+    @apply text-indigo-500 after:scale-100;
   }
 
   .custm-btn{
